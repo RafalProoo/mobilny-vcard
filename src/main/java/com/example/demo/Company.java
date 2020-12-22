@@ -47,6 +47,7 @@ public class Company {
 
     public String toJson() {
         String string = "{ \"name\": \" " + name + " \", \"address\": \" " + address + " \", \"email\": \" " + email + " \", \"telephone\": \" " + telephone + " \" }";
+        string = string.replaceAll("/", "|");
         return string;
     }
 

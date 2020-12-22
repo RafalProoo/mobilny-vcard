@@ -47,10 +47,10 @@ public class VCardController {
         for (Element company : companies) {
 
             companyList.add(new Company(
-                    company.select("a.company-name").text(),
-                    company.select("div.address").text(),
-                    company.select("a.ajax-modal-link").attr("data-company-email"),
-                    company.select("a.icon-telephone").attr("title")));
+                    company.select("a.company-name").text().trim(),
+                    company.select("div.address").text().trim(),
+                    company.select("a.ajax-modal-link").attr("data-company-email").trim(),
+                    company.select("a.icon-telephone").attr("title").trim()));
         }
 
         model.addAttribute("companyList", companyList);
