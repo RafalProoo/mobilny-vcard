@@ -47,11 +47,6 @@ public class Company {
 
     @Override
     public String toString() {
-        return "Company{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", email='" + email + '\'' +
-                ", telephone='" + telephone + '\'' +
-                '}';
+        return name + " " + address + " " + email + " " + telephone;
     }
 }
