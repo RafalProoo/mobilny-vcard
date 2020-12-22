@@ -30,8 +30,8 @@ public class VCardController {
     private static final String begin = "BEGIN:VCARD\r\n";
     private static final String version = "VERSION:4.0\r\n";
     private static final String end = "END:VCARD\r\n";
-    private static final String address = "ADR;TYPE=WORK:;;";
-    private static final String name = "FN:";
+    private static final String address = "ADR;CHARSET=utf-8;TYPE=WORK:;;";
+    private static final String name = "FN;CHARSET=utf-8:";
     private static final String telephone = "TEL;WORK:";
     private static final String email = "EMAIL:";
 
