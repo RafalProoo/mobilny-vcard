@@ -9,6 +9,9 @@
 
 <tr th:each="company :${companyList}">
     <td th:text="${company.toString()}"></td>
+    <form th:action="@{'/getVCard/' + ${company.toJson()}}" method="get">
+        <input type="submit" value="Get VCard">
+    </form>
     <br>
 </tr>
 

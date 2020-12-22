@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.IOException;
@@ -37,5 +38,10 @@ public class VCardController {
         model.addAttribute("companyList", companyList);
 
         return "companies";
+    }
+
+    @GetMapping("/getVCard/{company}")
+    public void getVCard(@PathVariable String company) {
+
     }
 }

@@ -45,6 +45,11 @@ public class Company {
         this.telephone = telephone;
     }
 
+    public String toJson() {
+        String string = "{ \"name\": \" " + name + " \", \"address\": \" " + address + " \", \"email\": \" " + email + " \", \"telephone\": \" " + telephone + " \" }";
+        return string;
+    }
+
     @Override
     public String toString() {
         return name + " " + address + " " + email + " " + telephone;
