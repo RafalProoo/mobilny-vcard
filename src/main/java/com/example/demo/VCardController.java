@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.google.gson.Gson;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -42,6 +43,7 @@ public class VCardController {
 
     @GetMapping("/getVCard/{company}")
     public void getVCard(@PathVariable String company) {
-
+        Company selectedCompany = new Gson().fromJson(company, Company.class);
+        System.out.println(selectedCompany);
     }
 }
